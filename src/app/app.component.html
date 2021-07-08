@@ -6,7 +6,7 @@
         Enter KMs.
       </td>
       <td>
-        <input (change) = "getValue()" />
+        <input (input) = "getValue($event)" />
       </td>
     </tr>
     <tr>
@@ -14,43 +14,12 @@
         Enter Unit
       </td>
       <td>
-        <input />
+        <input (input) = "getUnit($event)"/>
       </td>
     </tr>
     <tr>
-      <td>
-        <input type="submit" value="Click Here To Evaluate">
-      </td>
-      <td>
-        {{ FinalValue }}
-      </td>
-    </tr>
-  </table>
-</div><div id = "main-div">
-  <h1>Units Convertor Application</h1>
-  <table>
-    <tr>
-      <td>
-        Enter KMs.
-      </td>
-      <td>
-        <input (change) = "getValue()" />
-      </td>
-    </tr>
-    <tr>
-      <td>
-        Enter Unit
-      </td>
-      <td>
-        <input />
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <input type="submit" value="Click Here To Evaluate">
-      </td>
-      <td>
-        {{ FinalValue }}
+      <td colspan = 2>
+        {{getKm | conversion: 'mi'}}
       </td>
     </tr>
   </table>
